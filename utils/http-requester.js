@@ -1,4 +1,6 @@
 /* globals module require Promise */
+/*jshint esversion: 6 */
+
 "use strict";
 
 const request = require("request");

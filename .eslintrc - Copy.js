@@ -24,8 +24,8 @@ module.exports = {
             "error",
             "always"
         ],
-         "no-console":0,
         "globals":[
+            "require",
             "console"
         ]
     }

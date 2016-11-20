@@ -1,5 +1,5 @@
-/* globals require module */
-"use strict";
+/* globals module require */
+/*jshint esversion: 6 */
 
 const mongoose = require("mongoose"),
     Schema = mongoose.Schema;

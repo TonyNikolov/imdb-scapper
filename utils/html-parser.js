@@ -1,4 +1,6 @@
-/* globals module require Promise */
+/* globals console require setTimeout Promise */
+/*jshint esversion: 6 */
+
 "use strict";
 
 const jsdom = require("jsdom").jsdom,
@@ -21,5 +23,22 @@ module.exports.parseSimpleMovie = (selector, html) => {
     return Promise.resolve()
         .then(() => {
             return items;
+        });
+};
+module.exports.parseSimpleActor = (nameSelector,profileImgSelector,bioSelector,html) => {
+    $("body").html(html);
+    let nameActor = $(nameSelector).html();
+    let profilePhoto = $(profileImgSelector).html();
+    let biographyActor = $(bioSelector).html();
+
+    let actor = {
+        profileImage:profilePhoto,
+        name:nameActor,
+        biography:biographyActor
+    };
+    
+    return Promise.resolve()
+        .then(() => {
+            return actor;
         });
 };
